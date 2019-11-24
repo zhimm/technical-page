@@ -1,0 +1,156 @@
+git<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Techincal Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="container">
+        <nav class="side-nav">
+            <header id="main-title">
+                <h1><span class="svelte-title">SVELTE</span> Documentation</h1>
+                <ul>
+                    <li><a href="#Introduction">Introduction</a></li>
+                    <li><a href="#Installation">Installation</a></li>
+                    <li><a href="#Hello_World">Hello World</a></li>
+                    <li><a href="#Styling">Styling</a></li>
+                    <li><a href="#Reactivity">Reactivity</a></li>
+                    <li><a href="#Props">Props</a></li>
+                </ul>
+            </header>
+
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="Introduction">
+                <header>Introduction</header>
+                <article>
+                    <p>Svelte is a tool for building fast web applications.
+
+                        It is similar to JavaScript frameworks such as React and Vue, which share a goal of making it
+                        easy
+                        to build slick interactive user interfaces.
+
+                        But there's a crucial difference: Svelte converts your app into ideal JavaScript at build time,
+                        rather than interpreting your application code at run time. This means you don't pay the
+                        performance
+                        cost of the framework's abstractions, and you don't incur a penalty when your app first loads.
+                        You'll need to have basic familiarity with HTML, CSS and JavaScript to understand Svelte.</p>
+                </article>
+            </section>
+
+            <section class="main-section" id="Installation">
+                <header>Installation</header>
+                <article>
+                    <p>In the terminal, you can instantly create a new project like so:</p>
+                    <code>
+                        <pre>
+                            npx degit sveltejs/template my-svelte-project
+                            cd my-svelte-project
+                            npm install
+                            npm run dev
+                        </pre>
+                    </code>
+                </article>
+            </section>
+
+            <section class="main-section" id="Hello_World">
+                <header>Hello World</header>
+                <article>
+                    <p>
+                        A component that just renders some static markup isn't very interesting. Let's add some data.
+                        First, add a script tag to the component and declare a <code>name</code> variable:
+                    </p>
+                    <code>
+                        <pre>
+                            <span><</span><span>script</span><span>></span>
+                                let name = 'world';
+                            <span><</span><span>/</span><span>script</span> <span>></span>
+
+                            <span><</span>h1<span>></span>Hello world!<span><</span><span>/</span>h1<span>></span>
+                        </pre>
+                    </code>
+                    Then, we can refer to <code>name</code> in the markup:
+                    <code>
+                        <pre>
+                            <span><</span>h1<span>></span>Hello {name}!<span><</span><span>/</span>h1<span>></span>
+                        </pre>
+                    </code>
+                </article>
+            </section>
+
+            <section class="main-section" id="Styling">
+                <header>Styling</header>
+                <article>
+                    <p>Just like in HTML, you can add a style tag to your component. Let's add some styles to the
+                        <code><span><</span>p<span>></span></code> element:
+                    </p>
+                    <code>
+                        <pre>
+                            <span><</span>style<span>></span>
+                                p {
+                                    color: purple;
+                                    font-family: 'Comic Sans MS', cursive;
+                                    font-size: 2em;
+                                  }
+                            <span><</span><span>/</span>style<span>></span>
+                        </pre>
+                    </code>
+                    <p>Importantly, these rules are scoped to the component. You won't accidentally change the style of
+                        <code><span><</span>p<span>></span></code> elements elsewhere in your app.</p>
+                </article>
+            </section>
+
+            <section class="main-section" id="Reactivity">
+                <header>Reactivity</header>
+                <article>
+                    <p>At the heart of Svelte is a powerful system of <em>reactivity</em> for keeping the DOM in sync
+                        with the application state — for example, in response to an event.
+                    </p>
+                    <code>
+                        <pre>
+                            <span><</span>script<span>></span>
+                                let count = 0;
+                                function handleClick() {
+                                    // event handler code goes here
+                                }
+                            <span><</span>/script<span>></span>
+                                
+                            <span><</span>button<span>></span>
+                                Clicked {count} {count === 1 ? 'time' : 'times'}
+                            <span><</span>/button<span>></span>
+                        </pre>
+                    </code>
+                </article>
+            </section>
+
+            <section class="main-section" id="Props">
+                <header>Props</header>
+                <article>
+                    <p>
+                        In any real application, you'll need to pass data from one component down to its children. To do
+                        that, we need to declare properties, generally shortened to 'props'. In Svelte, we do that with
+                        the export keyword.
+                    </p>
+                    <code>
+                        <pre>
+                            <span><</span>script>
+                                export let answer;
+                            <span><</span><span>/</span>script<span>></span>
+                        </pre>
+                    </code>
+                </article>
+            </section>
+
+            <section class="main-section">
+
+            </section>
+        </main>
+    </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>

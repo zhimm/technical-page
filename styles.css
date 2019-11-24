@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    /* font-family: 'Fira Mono', monospace; */
+    line-height: 1.5;
+}
+
+span.svelte-title{
+    color: orangered;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 45px;
+}
+
+header{
+    font-size: 1.5em;
+}
+
+header#main-title{
+    margin-top: 50px;
+    position: sticky;
+    top: 0;
+}
+
+
+li{
+    margin-top: 50px;
+    list-style:none;
+    line-height: 0px; /*edit this later idk whats wrong */
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+article{
+    margin-bottom: 80px;
+}
+
+pre{
+    padding: 5px;
+    border-radius: 5px;
+    background: rgb(245, 237, 237);
+    margin: 40px 0 0 0;
+}
+
